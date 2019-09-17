@@ -1,0 +1,98 @@
+---
+output:
+  rmarkdown::html_document:
+    theme: simplex
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+setwd("H:/Rcodeclub_mails/Session 5")
+perc_img <- "80%"
+```
+
+
+```{r, out.width = "100%", fig.align = "center"}
+knitr::include_graphics("H:/Rcodeclub_mails/Session 5/images/image2.png")
+```
+
+### **Session 5**
+
+#### *2019-09-13*
+
+Dear colleagues,
+
+During the last R Code Club meeting we agreed to start a monthly newsletter including the topics discussed during each meeting for everyone who could not assist to follow up. We hope it will help to spread the word about these meetings and encourage anyone interested in R programming to join us!
+
+***
+
+&nbsp;
+
+### **Innovation Challenge in Ocean Plastic**
+
+```{r, out.width = perc_img, fig.align = "center", eval=FALSE}
+knitr::include_graphics("H:/Rcodeclub_mails/Session 5/images/image5.png")
+```
+
+This challenge from [National Geographic](https://www.nationalgeographic.org/funding-opportunities/innovation-challenges/plastic/dataviz/) aims to create ways to visualize plastic pollution to raise awareness. Our  colleagues Gert Everaert, Jelle Rondelez, Lennert Schepers, Nick Dillen (and with help from others) developed a tool that shows how much of the microplastics would end up in the ocean if we keep on increasing the plastic production as we are currently doing.
+
+Unfortunately it wasn’t selected as a finalist, but for sure we learn a lot and we can improve this tool for the next upcoming competition!
+
+The app is available in http://rshiny.lifewatch.be/ng-ocean-plastic-challenge/ Give it a try!
+
+&nbsp;
+
+### **Sea Invaders! - Open Sea Lab Hackaton**
+
+```{r, out.width= "30%", out.extra = 'style = "float:right; padding:10px"'}
+knitr::include_graphics("H:/Rcodeclub_mails/Session 5/images/image1.png")
+```
+
+From the 4th to the 6th of this month took place in the Zebrastraat venue in Ghent the 2nd Open Sea Lab Hackaton. The VLIZ team “FindingDemo” starring Jonas Lescroat, Jelle Rondelez, Pieter Provoost, Ruben Perez and Salva Fernandez developed a citizen science tool to early detect the spread of [invasive species](https://en.wikipedia.org/wiki/Invasive_species). These are species which colonize habitats where they weren’t present before - more often than not due to human intervention - causing several issues such as biodiversity decrease or economical loss. 
+
+This tool was designed thinking of divers, but any person who goes to the sea could use it! You just have to select your position and the tool tells you which species could be potentially found there based on the distance to the nearest record and the environmental conditions. If you see any, you can report the sighting through the app.
+Follow the link and have a look at this beta version in: https://seainvaders.eu/
+
+&nbsp;
+
+
+### Tracking the users of VLIZ data systems
+
+```{r, out.width = perc_img, fig.align = "center", eval=FALSE}
+knitr::include_graphics("H:/Rcodeclub_mails/Session 5/images/image3.png")
+```
+
+Here at the R Code Club we are setting up a little project to estimate the impact of our data systems by looking at the citations. Who is using (and citing) our data systems? Where do they come from? From which research disciplines are they?
+
+We will build further on a script from Pieter Provoost (OBIS). A lot of people from the group are interested, also from the policy division. 
+
+Find here the github repository: https://github.com/iobis/bib/tree/master/obis
+
+&nbsp;
+
+### Writing reports with R Markdown
+
+```{r, out.width = perc_img, fig.align = "center"}
+knitr::include_graphics("H:/Rcodeclub_mails/Session 5/images/image6.png")
+```
+
+Our colleague Cedric showed briefly how to create reports using RMarkdown. This framework allows to create documents with plain text, code outputs like plots, maps or tables or show code chunks (And not only in R! RMarkdown supports SQL, Python and other programming languages). For example, the [tutorial in accessing data for the OpenSeLab II](http://www.opensealab.eu/data2019) was created with RMarkdown. And also this document that you are reading!
+
+If you want to learn more about how to use it you can go to https://rmarkdown.rstudio.com/lesson-1.html …or simply attend our next meeting and we will show you!
+
+&nbsp;
+
+***
+
+<center>
+*Want to know more? Send an email to rcodeclub@vliz.be, join the mailing list in rcodeclub-subscribe@vliz.be or just ask any of us during coffee breaks!*
+
+&nbsp;
+
+</center>
+
+```{r, out.width = perc_img, fig.align = "center",fig.cap = "Hands up everyone who wants to join the R Code Club!"}
+knitr::include_graphics("H:/Rcodeclub_mails/Session 5/images/image4.png")
+```
+&nbsp;
+&nbsp;
+
