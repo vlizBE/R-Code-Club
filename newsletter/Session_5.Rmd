@@ -47,15 +47,16 @@ The app is available in http://rshiny.lifewatch.be/ng-ocean-plastic-challenge/ G
 knitr::include_graphics("H:/Rcodeclub_mails/Session 5/images/image1.png")
 ```
 
-From the 4th to the 6th of this month took place in the Zebrastraat venue in Ghent the 2nd Open Sea Lab Hackaton. The VLIZ team “FindingDemo” starring Jonas Lescroat, Jelle Rondelez, Pieter Provoost, Ruben Perez and Salva Fernandez developed a citizen science tool to early detect the spread of [invasive species](https://en.wikipedia.org/wiki/Invasive_species). These are species which colonize habitats where they weren’t present before - more often than not due to human intervention - causing several issues such as biodiversity decrease or economical loss. 
+From the 4th to the 6th of this month took place in the Zebrastraat venue in Ghent the [2nd Open Sea Lab Hackaton](http://www.opensealab.eu/). The VLIZ team “FindingDemo” starring Jonas Lescroat, Jelle Rondelez, Pieter Provoost, Ruben Perez and Salva Fernandez developed a citizen science tool to early detect the spread of [invasive species](https://en.wikipedia.org/wiki/Invasive_species). These are species which colonize habitats where they weren’t present before - more often than not due to human intervention - causing several issues such as biodiversity decrease or economical loss. 
 
 This tool was designed thinking of divers, but any person who goes to the sea could use it! You just have to select your position and the tool tells you which species could be potentially found there based on the distance to the nearest record and the environmental conditions. If you see any, you can report the sighting through the app.
-Follow the link and have a look at this beta version in: https://seainvaders.eu/
+
+They wrapped up their code in an [R package](https://github.com/EMODnet/OSL2-FindingDemo), but they also made available online the beta version: Follow the link and have a look at it: https://seainvaders.eu/
 
 &nbsp;
 
 
-### Tracking the users of VLIZ data systems
+### **Tracking the users of VLIZ data systems**
 
 ```{r, out.width = perc_img, fig.align = "center", eval=FALSE}
 knitr::include_graphics("H:/Rcodeclub_mails/Session 5/images/image3.png")
@@ -63,21 +64,20 @@ knitr::include_graphics("H:/Rcodeclub_mails/Session 5/images/image3.png")
 
 Here at the R Code Club we are setting up a little project to estimate the impact of our data systems by looking at the citations. Who is using (and citing) our data systems? Where do they come from? From which research disciplines are they?
 
-We will build further on a script from Pieter Provoost (OBIS). A lot of people from the group are interested, also from the policy division. 
+We will build further on a script from Pieter Provoost (OBIS). A lot of people from the group are interested, also from the policy division. We started working on it the past Thursday 2019-09-19.
 
-Find here the github repository: https://github.com/iobis/bib/tree/master/obis
 
 &nbsp;
 
-### Writing reports with R Markdown
+### **Writing reports with R Markdown**
 
 ```{r, out.width = perc_img, fig.align = "center"}
 knitr::include_graphics("H:/Rcodeclub_mails/Session 5/images/image6.png")
 ```
 
-Our colleague Cedric showed briefly how to create reports using RMarkdown. This framework allows to create documents with plain text, code outputs like plots, maps or tables or show code chunks (And not only in R! RMarkdown supports SQL, Python and other programming languages). For example, the [tutorial in accessing data for the OpenSeLab II](http://www.opensealab.eu/data2019) was created with RMarkdown. And also this document that you are reading!
+Our colleague Cedric showed briefly how to create reports using RMarkdown. This framework allows to create documents with plain text, code outputs like plots, maps or tables or show code chunks (And not only in R! RMarkdown supports SQL, Python and other programming languages). For example, the [tutorial in accessing data for the OpenSeLab II](http://www.opensealab.eu/data2019) was created with RMarkdown, but also this text that you are reading! What, you can't believe it? Just go to our [GitHub repository](https://github.com/vlizBE/R-Code-Club) and give yourself a try!
 
-If you want to learn more about how to use it you can go to https://rmarkdown.rstudio.com/lesson-1.html …or simply attend our next meeting and we will show you!
+If you want to learn more about how to use R Markdown you will find lots of information in the [official website](https://rmarkdown.rstudio.com/lesson-1.html)…or simply attend our next meeting and we will show you!
 
 &nbsp;
 
@@ -85,14 +85,11 @@ If you want to learn more about how to use it you can go to https://rmarkdown.rs
 
 <center>
 *Want to know more? Send an email to rcodeclub@vliz.be, join the mailing list in rcodeclub-subscribe@vliz.be or just ask any of us during coffee breaks!*
-
 &nbsp;
-
-</center>
 
 ```{r, out.width = perc_img, fig.align = "center",fig.cap = "Hands up everyone who wants to join the R Code Club!"}
 knitr::include_graphics("H:/Rcodeclub_mails/Session 5/images/image4.png")
 ```
+</center>
 &nbsp;
 &nbsp;
-
