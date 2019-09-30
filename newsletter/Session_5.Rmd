@@ -1,36 +1,37 @@
 ---
 output:
   rmarkdown::html_document:
-    theme: simplex
+    self_contained: true
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+library(knitr)
+opts_chunk$set(echo = FALSE)
 setwd("H:/Rcodeclub_mails/Session 5")
 perc_img <- "80%"
 ```
 
 
 ```{r, out.width = "100%", fig.align = "center"}
-knitr::include_graphics("H:/Rcodeclub_mails/Session 5/images/image2.png")
+include_graphics("H:/Rcodeclub_mails/Session 5/images/image2.png")
 ```
 
-### **Session 5**
+### **The R Code Club Newsletter**
 
 #### *2019-09-13*
 
 Dear colleagues,
 
-During the last R Code Club meeting we agreed to start a monthly newsletter including the topics discussed during each meeting for everyone who could not assist to follow up. We hope it will help to spread the word about these meetings and encourage anyone interested in R programming to join us!
-
-***
+During the last R Code Club meeting we agreed to start a newsletter including the topics discussed during the meetings for everyone who could not assist to follow up. We hope it will help to spread the word about these meetings and encourage anyone interested in R programming to join us!
 
 &nbsp;
+
+***
 
 ### **Innovation Challenge in Ocean Plastic**
 
 ```{r, out.width = perc_img, fig.align = "center", eval=FALSE}
-knitr::include_graphics("H:/Rcodeclub_mails/Session 5/images/image5.png")
+include_graphics("H:/Rcodeclub_mails/Session 5/images/image5.png")
 ```
 
 This challenge from [National Geographic](https://www.nationalgeographic.org/funding-opportunities/innovation-challenges/plastic/dataviz/) aims to create ways to visualize plastic pollution to raise awareness. Our  colleagues Gert Everaert, Jelle Rondelez, Lennert Schepers, Nick Dillen (and with help from others) developed a tool that shows how much of the microplastics would end up in the ocean if we keep on increasing the plastic production as we are currently doing.
@@ -44,7 +45,7 @@ The app is available in http://rshiny.lifewatch.be/ng-ocean-plastic-challenge/ G
 ### **Sea Invaders! - Open Sea Lab Hackaton**
 
 ```{r, out.width= "30%", out.extra = 'style = "float:right; padding:10px"'}
-knitr::include_graphics("H:/Rcodeclub_mails/Session 5/images/image1.png")
+include_graphics("H:/Rcodeclub_mails/Session 5/images/image1.png")
 ```
 
 From the 4th to the 6th of this month took place in the Zebrastraat venue in Ghent the [2nd Open Sea Lab Hackaton](http://www.opensealab.eu/). The VLIZ team “FindingDemo” starring Jonas Lescroat, Jelle Rondelez, Pieter Provoost, Ruben Perez and Salva Fernandez developed a citizen science tool to early detect the spread of [invasive species](https://en.wikipedia.org/wiki/Invasive_species). These are species which colonize habitats where they weren’t present before - more often than not due to human intervention - causing several issues such as biodiversity decrease or economical loss. 
@@ -59,20 +60,19 @@ They wrapped up their code in an [R package](https://github.com/EMODnet/OSL2-Fin
 ### **Tracking the users of VLIZ data systems**
 
 ```{r, out.width = perc_img, fig.align = "center", eval=FALSE}
-knitr::include_graphics("H:/Rcodeclub_mails/Session 5/images/image3.png")
+include_graphics("H:/Rcodeclub_mails/Session 5/images/image3.png")
 ```
 
-Here at the R Code Club we are setting up a little project to estimate the impact of our data systems by looking at the citations. Who is using (and citing) our data systems? Where do they come from? From which research disciplines are they?
+Here at the R Code Club we are setting up a little project to estimate the impact of our data systems by looking at the citations. Who is using (and citing) our data systems? Where do they come from? From which research disciplines are they? This tool would assist in visualizing the scope of our products and services, which is specially interesting for the policy division, creating reports or applying for grants.
 
-We will build further on a script from Pieter Provoost (OBIS). A lot of people from the group are interested, also from the policy division. We started working on it the past Thursday 2019-09-19.
-
+We are currently working in the script to scrap the citations from the web, as well as in the application. This is an app to be used by everyone interested, so we will be more than happy to hear your ideas, proposal and wishes in rcodeclub@vliz.be
 
 &nbsp;
 
 ### **Writing reports with R Markdown**
 
 ```{r, out.width = perc_img, fig.align = "center"}
-knitr::include_graphics("H:/Rcodeclub_mails/Session 5/images/image6.png")
+include_graphics("H:/Rcodeclub_mails/Session 5/images/image6.png")
 ```
 
 Our colleague Cedric showed briefly how to create reports using RMarkdown. This framework allows to create documents with plain text, code outputs like plots, maps or tables or show code chunks (And not only in R! RMarkdown supports SQL, Python and other programming languages). For example, the [tutorial in accessing data for the OpenSeLab II](http://www.opensealab.eu/data2019) was created with RMarkdown, but also this text that you are reading! What, you can't believe it? Just go to our [GitHub repository](https://github.com/vlizBE/R-Code-Club) and give yourself a try!
@@ -82,13 +82,46 @@ If you want to learn more about how to use R Markdown you will find lots of info
 &nbsp;
 
 ***
+<center>
+#### *What's next on the menu?*
+</center>
+
+Our next meeting will be focused on [Shiny apps!](https://shiny.rstudio.com). Shiny is an R package for developing interactive web application just by using R. This and more topics will be discussed the next 2019-10-18 at 14:00 CET in the [meeting room IODE TR1](https://goo.gl/maps/84nY6un5qGDyv3Mr9)
+
+```{r map, out.width = '100%', out.height= 250}
+library(leaflet)
+leaflet(width = "100%") %>%
+  addTiles %>%
+  setView(lng = 2.930397, lat = 51.232782, zoom = 16) %>%
+  addMarkers(lng = 2.930397, lat = 51.232782, popup = "Meeting room IODE TR1")
+```
+
+**Projects**
+  
+  * *Tracking the users of VLIZ data systems*
+  
+**Training**
+  
+  * *How to put your personal Shiny app online*
+  * *Best practices maintaining Shiny apps on VLIZ server*
+  * *How to add a Shiny app to your website*
+  * *Using R for [connecting to a database](https://db.rstudio.com/) and password security*
+  * *Data wrangling with [dplyr](https://dplyr.tidyverse.org/)*
+  
+**Tips & Tricks**
+
+  * *Create reproducible examples with [reprex](https://reprex.tidyverse.org)*
+  * *Read the source R code with [lookup](https://www.rdocumentation.org/packages/qdapTools/versions/1.3.3/topics/lookup)*
+
+
+***
 
 <center>
 *Want to know more? Send an email to rcodeclub@vliz.be, join the mailing list in rcodeclub-subscribe@vliz.be or just ask any of us during coffee breaks!*
 &nbsp;
 
 ```{r, out.width = perc_img, fig.align = "center",fig.cap = "Hands up everyone who wants to join the R Code Club!"}
-knitr::include_graphics("H:/Rcodeclub_mails/Session 5/images/image4.png")
+include_graphics("H:/Rcodeclub_mails/Session 5/images/image4.png")
 ```
 </center>
 &nbsp;
