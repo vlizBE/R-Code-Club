@@ -48,7 +48,7 @@ The app is available in http://rshiny.lifewatch.be/ng-ocean-plastic-challenge/ G
 include_graphics("H:/Rcodeclub_mails/Session 5/images/image1.png")
 ```
 
-From the 4th to the 6th of this month took place in the Zebrastraat venue in Ghent the [2nd Open Sea Lab Hackaton](http://www.opensealab.eu/). The VLIZ team “FindingDemo” starring Jonas Lescroat, Jelle Rondelez, Pieter Provoost, Ruben Perez and Salva Fernandez developed a citizen science tool to early detect the spread of [invasive species](https://en.wikipedia.org/wiki/Invasive_species). These are species which colonize habitats where they weren’t present before - more often than not due to human intervention - causing several issues such as biodiversity decrease or economical loss. 
+From the 4th to the 6th of this month took place in the Zebrastraat venue in Ghent the [2nd Open Sea Lab Hackaton](http://www.opensealab.eu/). The VLIZ team “FindingDemo” starring Jonas Lescroart, Jelle Rondelez, Pieter Provoost, Ruben Perez and Salva Fernandez developed a citizen science tool to early detect the spread of [invasive species](https://en.wikipedia.org/wiki/Invasive_species). These are species which colonize habitats where they weren’t present before - more often than not due to human intervention - causing several issues such as biodiversity decrease or economical loss. 
 
 This tool was designed thinking of divers, but any person who goes to the sea could use it! You just have to select your position and the tool tells you which species could be potentially found there based on the distance to the nearest record and the environmental conditions. If you see any, you can report the sighting through the app.
 
