@@ -56,7 +56,7 @@ There is a tidyverse package to create reproducible examples named [reprex](http
 
 ### **Best practices maintaining Shiny apps on VLIZ server**
 
-There are certain practices we should follow when working in a project like the mentioned citation shiny app. Our colleague Paul from the IT department gave us a magistral and fun class about [version control](https://en.wikipedia.org/wiki/Version_control) for software development. Open sources systems like [Git](https://git-scm.com/) allows to keep track of all the changes that happened within your project. This repository is also a great way of working within a team, and it can be used as a backup. All advantages!
+There are certain practices we should follow when working in a project like the mentioned citation shiny app. Our colleague Paul from the IT department gave us a fun lecture about [version control](https://en.wikipedia.org/wiki/Version_control) in software development. Open sources systems like [Git](https://git-scm.com/) allows to keep track of all the changes that happened within your project. This repository is also a great way of working within a team, and it can be used as a backup. All advantages!
 
 
 &nbsp;
@@ -74,7 +74,7 @@ Inside the [R Code Club github repository](https://github.com/vlizBE/R-Code-Club
 #### *What's next on the menu?*
 </center>
 
- This and more topics will be discussed the next 2019-11-08 at 14:00 CET in the [meeting room Marmara](https://goo.gl/maps/84nY6un5qGDyv3Mr9)
+These and more topics will be discussed the next 2019-11-08 at 14:00 CET in the [meeting room Marmara](https://goo.gl/maps/84nY6un5qGDyv3Mr9)
 
 ```{r map, out.width = '100%', out.height= 250}
 library(leaflet)
