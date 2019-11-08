@@ -11,6 +11,9 @@ library(knitr)
 opts_chunk$set(echo = FALSE)
 #setwd("H:/Rcodeclub_mails/Session 6")
 perc_img <- "80%"
+library(dplyr)
+library(nycflights13)
+library(kableExtra)
 ```
 
 
@@ -18,11 +21,11 @@ perc_img <- "80%"
 include_graphics("images/image2.png")
 ```
 
-### **Session 6**
+### **Session 7**
 
-#### *2019-10-18*
+#### *2019-11-08*
 
-The R code club keeps growing! This time we were twelve R nerds who ganged up together to share what were the latest issues that we solved using the statistical programming language. Grab a coffee and keep reading!
+
 
 &nbsp;
 
@@ -30,33 +33,59 @@ The R code club keeps growing! This time we were twelve R nerds who ganged up to
 
 ### **Measuring the citation impact of our data systems**
 
-Since last month we started a series of regular meetings to brainstorm on developing an application that keeps track of the citations of systems hosted at VLIZ. For example, [WoRMS](http://www.marinespecies.org/) or [MarineRegions](http://www.marineregions.org/). We had colleagues from different departments involved: library, data centre or policy.
+We kept squizing our schedules to have a look at how to create our citation App. We found a website called dimensions which looks quite promising! It can give citations, relative citation ratio or field citation ratio. They provide web services despite there is not an R package yet, but a python library :(
 
-This application will be developed in RShiny, using gitlab as the version control system. We are currently looking at the capabilities of different packages working with citation and academic research.
-
-We created a [gitlab repository for the citation app](https://gitlab.vliz.be/datac/rshiny/citation-impact), check it out!
+However this is none of a problem, cause we can create our own R package! But we can also contact people who do packages and ask if they have one for Dimensions.
 
 &nbsp;
 
-### **How to make your own shiny app**
+### **Intro to dplyr**
 
-Despite unfortunately our colleague Jonas Mortelmans couldn't assist, he prepared some slides explaining the logic behind a shiny app. In a nutshell, The output of a shiny app is reactive and depends on the input of the user. This part is edited in the User Interface side of the app, while the transformations run in the Server.
+Our colleague Thomas gave an introduction to the use of the tidyverse dyplr. Dplyr stands for dataset aplyr?. This is a package to handle data. It provides functions that correspond to the most common ways of analysing data.
 
-These shiny apps can be uploaded to shinyapps.io for free up to 25h a month. There is an example of Jonas: the [ScioMapper](https://sciomyzidae.shinyapps.io/sciomapper/)! More examples can be found in the [shiny-examples package](https://github.com/rstudio/shiny-examples).
+Works with tibbles, which is an improvement of the data.frame: Why? it never changes the input type, does not change the variable name, a subset is always a tibble, never a vector or a data frame.
 
+Shift + Alt + K opens a list of shorcuts.
+
+The pipeline is one of the most famous characteristics of dplyr: it feeds the following function with the output with the previous one, which is good to avoid the need of calling again the dataset and making nested queries easier to understand.
+
+```{r setup1, include=TRUE, results='hide'}
+flights%>%         
+  filter(month==4,day==12) %>%
+  arrange(desc(sched_dep_time)) %>% head()
+```
+
+
+```{r dplyr example, include=TRUE}
+
+flights%>%         
+  filter(month==4,day==12) %>%
+  arrange(desc(sched_dep_time)) %>% head() %>% kable() %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"))
+```
+
+There is a dplyr course in datacamp, really recomended to learn this framework!
 
 &nbsp;
 
 
-### **Making a clean reproducible example**
+### **  **
 
-There is a tidyverse package to create reproducible examples named [reprex](https://reprex.tidyverse.org/). This is a great way to ask for help when you get stuck while coding.
+This is a weekly data project just to build up skills. They have a github repository with all the projects.
+
+Some examples are the NYC squirrel census or the horror movies rating. 
+
+There is also a podcast
+
+it can be a good example of how other people did things
+
+
 
 &nbsp;
 
-### **Best practices maintaining Shiny apps on VLIZ server**
+### **R code club internship**
 
-There are certain practices we should follow when working in a project like the mentioned citation shiny app. Our colleague Paul from the IT department gave us a fun lecture about [version control](https://en.wikipedia.org/wiki/Version_control) in software development. Open sources systems like [Git](https://git-scm.com/) allows to keep track of all the changes that happened within your project. This repository is also a great way of working within a team, and it can be used as a backup. All advantages!
+We created an internship proposal 
 
 
 &nbsp;
@@ -68,6 +97,12 @@ The R Code Club newsletter is being written using RMarkdown. This framework allo
 Inside the [R Code Club github repository](https://github.com/vlizBE/R-Code-Club) you can find this newsletter. Feel free to have a look and play around!
 
 &nbsp;
+
+### ** Code style**
+
+It is important to use good style for writing code. 
+
+library styler, set the style as you want
 
 ***
 <center>
@@ -105,5 +140,7 @@ leaflet(width = "100%") %>%
 #include_graphics("images/image2.png")
 ```
 </center>
+
+
 &nbsp;
 &nbsp;
