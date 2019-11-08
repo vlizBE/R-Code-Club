@@ -9,7 +9,7 @@ output:
 ```{r setup, include=FALSE}
 library(knitr)
 opts_chunk$set(echo = FALSE)
-#setwd("H:/Rcodeclub_mails/Session 6")
+# setwd("H:/Rcodeclub_mails/Session 6")
 perc_img <- "80%"
 ```
 
@@ -18,7 +18,9 @@ perc_img <- "80%"
 include_graphics("images/image2.png")
 ```
 
-### **Session 6**
+### **Session 7**
+
+This is the start of newsletter 7
 
 #### *2019-10-18*
 
@@ -79,7 +81,7 @@ These and more topics will be discussed the next 2019-11-08 at 14:00 CET in the 
 ```{r map, out.width = '100%', out.height= 250}
 library(leaflet)
 leaflet(width = "100%") %>%
-  addTiles %>%
+  addTiles() %>%
   setView(lng = 2.930397, lat = 51.232782, zoom = 16) %>%
   addMarkers(lng = 2.930397, lat = 51.232782, popup = "Meeting room IODE TR1")
 ```
@@ -102,7 +104,7 @@ leaflet(width = "100%") %>%
 &nbsp;
 
 ```{r, out.width = perc_img, fig.align = "center",fig.cap = ""}
-#include_graphics("images/image2.png")
+# include_graphics("images/image2.png")
 ```
 </center>
 &nbsp;
