@@ -6,7 +6,7 @@ output:
     
 ---
 
-```{r setup, include=FALSE}
+```{r setup, include=FALSE, }
 library(knitr)
 opts_chunk$set(echo = FALSE)
 # setwd("H:/Rcodeclub_mails/Session 6")
@@ -14,6 +14,7 @@ perc_img <- "80%"
 library(dplyr)
 library(nycflights13)
 library(kableExtra)
+library(emo)
 ```
 
 
@@ -23,99 +24,101 @@ include_graphics("images/image2.png")
 
 ### **Session 7**
 
-<<<<<<< HEAD
-#### *2019-11-08*
+<!-- <<<<<<< HEAD
+
 =======
 This is the start of newsletter 7
->>>>>>> a93b95ac80487b7ae36fb509afee0877ebcc933a
+>>>>>>> a93b95ac80487b7ae36fb509afee0877ebcc933a -->
 
+#### *2019-11-08*
 
-
+Were you worried about the next monthly R Code Club newsletter? You can breath again, here it is! Let's have a look at what did the Vlizers do with R lately.
 &nbsp;
 
 ***
 
 ### **Measuring the citation impact of our data systems**
 
-We kept squizing our schedules to have a look at how to create our citation App. We found a website called dimensions which looks quite promising! It can give citations, relative citation ratio or field citation ratio. They provide web services despite there is not an R package yet, but a python library :(
+We kept squeezing our schedules to have a look at how to create the citation App. We found a platform which looks quite promising: [Dimensions](https://www.dimensions.ai/). It gives citations, the relative citation ratio and the field citation ratio. They provide web services despite there is not an R package yet, but a python library. Maybe the brand new PyClub has something to say? `r emo::ji("wink")`
 
-However this is none of a problem, cause we can create our own R package! But we can also contact people who do packages and ask if they have one for Dimensions.
+In any case, we can create our own R package! But we can also contact the community of R packages developers and ask if they have one for Dimensions.
 
 &nbsp;
 
 ### **Intro to dplyr**
 
-Our colleague Thomas gave an introduction to the use of the tidyverse dyplr. Dplyr stands for dataset aplyr?. This is a package to handle data. It provides functions that correspond to the most common ways of analysing data.
+Our colleague Thomas gave an introduction to the use of the tidyverse package [dyplr](https://dplyr.tidyverse.org/). Dplyr stands for dataset pliers. This is a package to handle data. It provides functions that correspond to the most common ways of analyzing data.
 
-Works with tibbles, which is an improvement of the data.frame: Why? it never changes the input type, does not change the variable name, a subset is always a tibble, never a vector or a data frame.
+Dplyr works with [tibbles](https://tibble.tidyverse.org/), which is an improvement of traditional [data frames](https://www.rdocumentation.org/packages/base/versions/3.6.1/topics/data.frame). For example, Tibble never changes the input type or the name of a variable. A subset of a tibble is always a tibble, while a subset of a data frame column is often a vector.
 
-Shift + Alt + K opens a list of shorcuts.
+Also, one of the most popular features of Dplyr is the [pipe operator](https://magrittr.tidyverse.org/) '&>&'. This feeds the following function with the output with the previous one, which is good to avoid the need of calling again the dataset or making nested queries. 
 
-The pipeline is one of the most famous characteristics of dplyr: it feeds the following function with the output with the previous one, which is good to avoid the need of calling again the dataset and making nested queries easier to understand.
+For example, have a look at the table below built from the dataset 'flights' of the package [lnycflights13](https://cran.r-project.org/web/packages/nycflights13/index.html). Here, we filter by month and day, we order the data by scheduled departure time in descenct order and we finally show the 6 first rows with head - Everything in a single line!
 
-```{r setup1, include=TRUE, results='hide'}
-flights%>%         
-  filter(month==4,day==12) %>%
-  arrange(desc(sched_dep_time)) %>% head()
+```{r setup1, include=TRUE, results='hide', echo=TRUE}
+  flights %>% filter(month == 4,day == 12) %>% arrange(desc(sched_dep_time)) %>% head()
 ```
 
 
 ```{r dplyr example, include=TRUE}
 
-flights%>%         
+flights %>% select(1:10)  %>%      
   filter(month==4,day==12) %>%
   arrange(desc(sched_dep_time)) %>% head() %>% kable() %>%
-  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"))
+  kable_styling(bootstrap_options = c("condensed"))
 ```
 
-There is a dplyr course in datacamp, really recomended to learn this framework!
+There is a [dplyr course in datacamp](https://www.datacamp.com/courses/data-manipulation-with-dplyr-in-r), really recommended to learn this framework!
 
 &nbsp;
 
 
-### **  **
+### **Tidy Tuesdays**
 
-This is a weekly data project just to build up skills. They have a github repository with all the projects.
+This is a weekly data project just to build up skills. Every Monday, a new dataset is posted and the community create any kind of projects with it. There is a [github repository](https://github.com/rfordatascience/tidytuesday).
 
-Some examples are the NYC squirrel census or the horror movies rating. 
+Some examples below:
 
-There is also a podcast
+[Walking vs Cycling (to work)](https://twitter.com/chucc900/status/1192009972659286016)
 
-it can be a good example of how other people did things
+[Horror movies](https://twitter.com/cnicault/status/1187050382125649923)
 
+[Visitors in national parks](https://twitter.com/Amit_Levinson/status/1174364639427272706)
 
+[Simpsons](https://twitter.com/WireMonkey/status/1166774098380447744)
 
 &nbsp;
 
 ### **R code club internship**
 
-We created an internship proposal 
+We created an [internship proposal](https://www.thesis.ugent.be/node/3166) for MSc students to join us for two months and help us out with tasks related to the R Code Club. Spreading the word and tasks proposals are very welcomed! `r emo::ji("pray")`
 
 
 &nbsp;
 
-### **R Code Club Newsletter**
+### **#30DayMapChallenge**
 
-The R Code Club newsletter is being written using RMarkdown. This framework allow to create documents using both the markdown writing syntax and code chunks (and not only R! Also SQL, Python...). The RMarkdown projects can be exported as a word document, pdf (using LaTeX) or as an html file. 
+This [challenge](https://twitter.com/hashtag/30daymapchallenge) consisted in creating a new map every day during one month. Every day the topic was different. Our colleague Brit created this beautiful fish tracking map. Enjoy!
 
-Inside the [R Code Club github repository](https://github.com/vlizBE/R-Code-Club) you can find this newsletter. Feel free to have a look and play around!
+&nbsp;<center>
+![d](images/harry_test_logo.gif)
+</center>
 
-&nbsp;
+### `r emo::ji("Christmas")` **New year, new topics** 
 
-### ** Code style**
+It is time to discuss what will be the following topics during the next year of the R Code Club. Have a look at the confluence page to see some of the topics we mentioned, but don't hesitate to jump into the discussion and feed us with your ideas!
 
-It is important to use good style for writing code. 
 
-library styler, set the style as you want
 
 ***
 <center>
 #### *What's next on the menu?*
 </center>
 
-These and more topics will be discussed the next 2019-11-08 at 14:00 CET in the [meeting room Marmara](https://goo.gl/maps/84nY6un5qGDyv3Mr9)
+These and more topics will be discussed the next 2019-12-06 at 14:00 CET in the [meeting room Marmara](https://goo.gl/maps/84nY6un5qGDyv3Mr9)
 
-```{r map, out.width = '100%', out.height= 250}
+```{r map, out.width = '100%', out.height= 250, eval=FALSE}
+# Something went wrong, it doesnt knit. Possible overlapping with another package.
 library(leaflet)
 leaflet(width = "100%") %>%
   addTiles() %>%
@@ -125,14 +128,15 @@ leaflet(width = "100%") %>%
 
 **Projects**
   
-  * *Citation impact shiny app*
+  * *Demo IMIS-viewer*
+  * *PyClub*
   
 **Training**
   
-  * *Data wrangling with dplyr*
-  * *Warming Stripes in R*
-  * *Tidy Tuesdays*
-  * *R Code Club internship*
+  * *E-Science*
+  * *Demo IMIS-viewer*
+  * *How to use Progress-Bars*
+  * *How to make dynamic selection boxes *
 
 ***
 
